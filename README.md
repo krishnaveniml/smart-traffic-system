@@ -2,27 +2,39 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [Smart Priority Based Traffic System Using YOLO system] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [Bug Busters]
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: [Nazrin Nizam N] - [College of Engineering Perumon]
+- Member 2: [Krishnaveni M L] - [College of Engineering Perumon]
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
-### Project Description
-[2-3 lines about what your project does]
+## 📌 Project Overview
+Our system doesn't just react to traffic; it **understands** the road. 
 
-### The Problem statement
-[What problem are you solving?]
+By leveraging the **YOLO (You Only Look Once)** AI framework, SmartVision transitions traffic management from static, timer-based cycles to a **Vision-to-Action** pipeline. The system identifies vehicle density in real-time and dynamically prioritizes lanes, ensuring that a lane with 50 vehicles isn't held up by a "dumb" timer while an empty lane sits with a green light.
 
-### The Solution
-[How are you solving it?]
+
+
+## ❌ The Problem: The "Boring" 60-Second Wait
+Traditional traffic light systems are either manually controlled or rely on fixed timers. This leads to massive inefficiencies:
+* **Static Latency:** Every lane is forced to wait for a pre-set duration (e.g., 60s), regardless of actual traffic volume.
+* **Empty Lane Greening:** Situations where a lane with zero vehicles holds a green light while other lanes are congested.
+* **Congestion Cascades:** Poorly timed lights lead to "stop-and-go" traffic, increasing fuel consumption and commuter frustration.
+
+## ✅ The Solution: Density-Based Prioritization
+Our approach replaces fixed timers with a **Time-Selective System** based on real-time visual data:
+
+1.  **Vehicle Counting:** Uses YOLO object detection to identify cars, trucks, and motorcycles across all lanes.
+2.  **Lane Prioritization:** Ranks lanes based on their current vehicle density.
+3.  **Dynamic Timing:** Allocates green-light duration proportionally to the count of vehicles detected.
+4.  **OpenCV Integration:** Designed to scale from static image processing to real-time video stream analysis.
 
 ---
 
@@ -31,10 +43,10 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used:Python,
+- Frameworks used: [streamlit]
+- Libraries used: [pandas,YOLO(detecting number of cars)]
+- Tools used: [VS Code, Git, Arduino IDE, Gemini,]
 
 **For Hardware:**
 - Main components: [List main components]
@@ -57,14 +69,25 @@ List the key features of your project:
 
 ### For Software:
 
-#### Installation
-```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+  #### Installation
+## Quick setup (PowerShell)
+```powershell
+cd c:\Users\KRISHNA_VENI\bug
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+# Install CPU PyTorch (or follow https://pytorch.org for GPU)
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+pip install streamlit ultralytics pyserial pillow pandas
 ```
 
-#### Run
-```bash
-[Run commands - e.g., npm start, python app.py]
+## Files
+- app.py — Streamlit app (main)
+- yolo11s.pt — Place model weights in repo root
+
+## Run
+```powershell
+streamlit run app.py
 ```
 
 ### For Hardware:
