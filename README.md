@@ -93,7 +93,7 @@ streamlit run app.py
 ### For Hardware:
 
 #### Components Required
-[List all components needed with specifications]
+[ESP32]
 
 #### Circuit Setup
 [Explain how to set up the circuit]
@@ -120,12 +120,10 @@ streamlit run app.py
 **System Architecture:**
 
 ![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
-
-**Application Workflow:**
+Image Upload → Vehicle Detection → Density Calculation → Priority Decision → Wi-Fi Transmission → ESP32 → Traffic Signal Control
 
 ![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+Lane images are uploaded through the web interface, where vehicle detection and density analysis are performed; based on the calculated traffic priority, control commands are sent via Wi-Fi to the ESP32 Dev Module, which dynamically adjusts the traffic signals by allocating green time to the lane with higher vehicle density.
 
 ---
 
