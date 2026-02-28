@@ -49,19 +49,19 @@ Our approach replaces fixed timers with a **Time-Selective System** based on rea
 - Tools used: [VS Code, Git, Arduino IDE, Gemini,]
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+- Main components: [ESP32]
+- Specifications: [An adaptive traffic light system using ESP32 DEV MODULE operates with a clock spped upto 240MHz ,analyzes uploaded images to detect vehicle density and dynamically controols LED traffic signals by adjusting green time based on traffic priority]
+- Tools required: [ESP32 DEV MODULE, breadboard jumper wire, laptop, web development tools]
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: [Real time Traffiv monitoring system ]
+- Feature 2: [Dynamic signal timing adjustments]
+- Feature 3: [Pedistrian aware operation ]
+- Feature 4: [reduced traffic congestion]
 
 ---
 
